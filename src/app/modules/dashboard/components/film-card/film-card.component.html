@@ -1,0 +1,29 @@
+<div class="film-card">
+  <a [routerLink]="['/film-details']" [queryParams]="{title:film.Title}">
+    <figure class="card-banner">
+      <img [src]="film.Poster" [alt]="film.Title + 'film poster'">
+    </figure>
+  </a>
+  <div class="title-wrapper">
+    <a [routerLink]="['/film-details']" [queryParams]="{title:film.Title}">
+      <h3 class="card-title">{{film.Title}}</h3>
+    </a>
+    <time>{{film.Year}}</time>
+  </div>
+  <div class="card-data">
+    <div *ngIf="film.Awards !== emptyFilmData" class="awards">{{film.Awards}}</div>
+    <div class="duration">
+      <time>{{film.Runtime}}</time>
+    </div>
+    <div class="rating">
+      <data>{{film.imdbRating}}</data>
+    </div>
+  </div>
+  <div class="card-data">
+    <data class="plot">{{film.Plot | shorten:currentPlotLimit}}</data>
+    <p *ngIf="showReadMoreBtn()" class="link-plot" (click)="showText()">
+      {{ isReadMore ? 'Read Less' : 'Read More'}}
+    </p>
+    <!-- <a [routerLink]="['/film-details']" [queryParams]="{title:film.Title}" class="link">Details</a> -->
+  </div>
+</div>

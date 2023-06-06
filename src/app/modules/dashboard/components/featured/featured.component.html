@@ -1,0 +1,16 @@
+<section class="featured">
+    <div class="container">
+        <div class="flex-wrapper">
+            <div>
+                <p class="section-subtitle">Our top</p>
+                <h2 class="h2 section-title">Featured</h2>
+            </div>
+        </div>
+
+        <ul class="film-list  has-scrollbar">
+            <li *ngFor="let film of (topFilms$ | async)">
+                <app-film-card [film]="film"></app-film-card>
+            </li>
+        </ul>
+    </div>
+</section>

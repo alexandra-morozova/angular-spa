@@ -1,0 +1,16 @@
+<section class="search">
+    <div class="container">
+        <div class="search-content">
+            <h1 class="h1 search-title">
+                OpenDB <strong>Films</strong>, Series & Shows
+            </h1>
+            <div class="container">
+                <form (ngSubmit)="onSearch()" #searchForm="ngForm" class="search-form">
+                    <input [(ngModel)]="searchValue" type="text" name="search" required placeholder="Search for title"
+                        class="search-field">
+                    <button type="submit" class="search-form-btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

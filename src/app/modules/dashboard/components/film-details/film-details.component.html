@@ -1,0 +1,32 @@
+<section class="film-detail">
+  <div class="container" *ngIf="(film$ | async) as film">
+    <figure class="film-detail-poster">
+      <img [src]="getImage(film)" [alt]="film.Title + 'film poster'">
+    </figure>
+    <div class="film-detail-content">
+      <h1 class="h1 detail-title">
+        {{film.Title}} {{film.Type}}
+      </h1>
+      <div class="info-wrapper">
+        <div class="info">
+          <div>{{film.Genre}}</div>
+          <div>{{film.Actors}}</div>
+          <div>{{film.Director}}</div>
+          <div>{{film.Rated}}</div>
+          <div>{{film.Awards}}</div>
+        </div>
+        <div class="info-wrapper">
+          <div class="info">
+            <time>{{film.Year}}</time>
+          </div>
+          <div class="info">
+            <time>{{film.Runtime}}</time>
+          </div>
+        </div>
+      </div>
+      <p class="plot">
+        {{film.Plot}}
+      </p>
+    </div>
+  </div>
+</section>

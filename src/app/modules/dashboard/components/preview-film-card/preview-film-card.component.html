@@ -1,0 +1,13 @@
+<div class="film-card">
+  <a [routerLink]="['/film-details']" [queryParams]="{title:film.Title}">
+    <figure class="card-poster">
+      <img [src]="getImage(film)" [alt]="film.Title + 'film poster'">
+    </figure>
+  </a>
+  <div class="title-wrapper">
+    <a [routerLink]="['/film-details']" [queryParams]="{title:film.Title}">
+      <h3 class="card-title">{{film.Title}}</h3>
+    </a>
+    <time>{{film.Year}}</time>
+  </div>
+</div>

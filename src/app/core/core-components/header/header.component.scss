@@ -1,0 +1,48 @@
+ .logo img {
+   width: 55px;
+ }
+
+ .logo-text {
+   color: var(--emeraldgreen-2);
+   font-size: var(--fs-4);
+   font-weight: var(--fw-700);
+   margin-bottom: 10px;
+ }
+
+ .header {
+   background: var(--eerie-black);
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding-block: 25px;
+   z-index: 4;
+ }
+
+ .header .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 30px;
+ }
+
+ .navbar-list {
+   all: unset;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+
+ .navbar-link {
+   transition: var(--transition-1);
+   border-bottom: none;
+   font-size: var(--fs-9);
+   font-weight: var(--fw-700);
+   text-transform: uppercase;
+   padding: 30px 15px;
+   color: var(--white);
+ }
+
+ .navbar-link:is(:hover, :focus) {
+   color: var(--emeraldgreen-2);
+ }

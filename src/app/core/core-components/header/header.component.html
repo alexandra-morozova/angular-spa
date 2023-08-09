@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="container">
+    <div>
+      <a [routerLink]="['']" class="logo">
+        <img src="./../assets/images/film-ico.png" alt="Logo">
+      </a>
+      <div class="logo-text">Open database</div>
+    </div>
+
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li>
+          <a [routerLink]="['/film']" class="navbar-link">Film</a>
+        </li>
+        <li>
+          <a [routerLink]="['/show']" class="navbar-link">Show</a>
+        </li>
+        <li>
+          <a [routerLink]="['/series']" class="navbar-link">Series</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,92 @@
+  .search {
+    background: url("./../../../../../assets/images/pxfuel.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    height: 70vh;
+    max-height: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-block: var(--section-padding);
+  }
+
+  .search-content {
+    margin-top: 60px;
+  }
+
+  .search-title {
+    margin-bottom: 30px;
+  }
+
+  .search-title>strong {
+    color: var(--emeraldgreen-2);
+  }
+
+  .search-field {
+    padding: 16px 30px;
+    margin-bottom: 15px;
+  }
+
+  .search-form-btn {
+    background: var(--eerie-black);
+    color: var(--emeraldgreen-2);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--eerie-black);
+    padding: 15px 34px;
+    border-radius: 4px;
+    margin-inline: auto;
+    transition: var(--transition-1);
+  }
+
+  .search-form-btn:is(:hover, :focus) {
+    background: var(--emeraldgreen-2);
+    color: var(--eerie-black);
+  }
+
+
+  @media (min-width: 768px) {
+    .search .container {
+      width: 950px;
+    }
+
+    .search-form {
+      position: relative;
+      max-width: 530px;
+      margin-inline: auto;
+    }
+
+    .search-form-btn {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .search-form {
+      margin-inline: 0;
+      max-width: unset;
+      width: 100%;
+      max-width: 530px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .search {
+      background-position: right;
+    }
+
+    .search .container {
+      width: 950px;
+    }
+
+    .search-content {
+      margin-top: 100px;
+      max-width: 600px;
+    }
+  }

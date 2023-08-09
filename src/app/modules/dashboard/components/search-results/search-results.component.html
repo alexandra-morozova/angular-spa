@@ -1,0 +1,18 @@
+<section class="search-results">
+    <div class="container" *ngIf="(result$ | async) as results">
+        <div class="flex-wrapper">
+            <div class="title-wrapper">
+                <h2 class="h2 section-title">We Found: {{results.totalResults}}</h2>
+            </div>
+        </div>
+        <ul *ngIf="(results.Response != 'False') else noResults" class="film-list  has-scrollbar">
+            <li *ngFor="let film of (result$ | async)?.Search">
+                <app-preview-film-card [film]="film"></app-preview-film-card>
+            </li>
+        </ul>
+
+        <ng-template #noResults>
+            <h3 class="error-message">No Results</h3>
+        </ng-template>
+    </div>
+</section>
